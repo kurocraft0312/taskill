@@ -22,9 +22,21 @@
         </table>
         <tbody>
             <!-- [1] ここに <tr> で ToDo の要素を1行づつ繰り返し表示したい -->
+            <tr v-for="item in todos" v-bind:key="item.id">
+                <th>{{item.id}}</th>
+                <td>{{item.comment}}</td>
+                <td class="state">
+                    <!--状態変更ボタンのモック-->
+                    <button>{{item.state}}</button>
+                </td>
+                <td class="button">
+                    <!--削除ボタンのモック-->
+                    <button>削除</button>
+                </td>
+            </tr>
         </tbody>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
