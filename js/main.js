@@ -29,5 +29,15 @@ const vm = new Vue({
         saveTodo: function(){
             localStorage.setItem('Item',JSON.stringify(this.items));
         },
+        loadTodo: function(){
+            this.items = JSON.parse(localStorage.getItem('items'));
+            if(!this.items){
+                this.items = [];
+            }
+        },
+        mounted: function(){
+            this.loadTodo();
+        },
     }
+    
 })
