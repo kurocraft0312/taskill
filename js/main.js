@@ -12,17 +12,22 @@ const vm = new Vue({
         newItemTitle:''
     },
     methods: {
-        addTodo: function(){
+        addTodo: function(newItemTitle){
             this.items.push({
                 title:this.newItemTitle,
                 isChecked:false
             });
             this.newItemTitle = '';
+            this.saveTodo();
         },
         deleteTodo: function(){
             this.items = this.items.filter(function(item){
                 return item.isChecked === false;
             });
+            this.saveTodo();
+        },
+        saveTodo: function(){
+            localStorage.setItem('Item',JSON.stringify(this.items));
         },
     }
 })
