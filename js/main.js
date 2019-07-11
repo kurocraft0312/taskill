@@ -14,7 +14,7 @@ const vm = new Vue({
     methods: {
         addTodo: function(newItemTitle){
             this.items.push({
-                title:this.newItemTitle,
+                title:newItemTitle,//this.newItemTitleじゃなくなると表示がバグる「object KeyboardEvent」と描画される
                 isChecked:false
             });
             this.newItemTitle = '';
@@ -27,7 +27,7 @@ const vm = new Vue({
             this.saveTodo();
         },
         saveTodo: function(){
-            localStorage.setItem('Item',JSON.stringify(this.items));
+            localStorage.setItem('Items',JSON.stringify(this.items));
         },
         loadTodo: function(){
             this.items = JSON.parse(localStorage.getItem('items'));
