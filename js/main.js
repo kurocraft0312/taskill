@@ -8,7 +8,7 @@ const vm = new Vue({
     methods: {
         addTodo: function(newTitle){
             this.items.push({
-                title:newTitle,//this.newItemTitleじゃなくなると表示がバグる「object KeyboardEvent」と描画される
+                title:newTitle,
                 isChecked:false
             });
             this.newItemTitle = '';

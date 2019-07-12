@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.todo {
+    list-style:none;
+}
+
 .done {
     text-decoration: line-through;
 }

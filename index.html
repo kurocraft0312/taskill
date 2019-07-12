@@ -14,7 +14,7 @@
             <!--addTodoの中のnewItemtitleという値を取得している-->
             <input type="text" placeholder="Todoを入力してください" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
         </p>
-        <ul>
+        <ul class="todo">
             <li v-for="item in items">
                 <label v-bind:class="{done: item.isChecked }">
                     <input type="checkbox" v-model="item.isChecked"> {{item.title}}
