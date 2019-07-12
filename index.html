@@ -11,6 +11,7 @@
 <body>
     <div id="app">
         <p>
+            <!--addTodoの中のnewItemtitleという値を取得している-->
             <input type="text" placeholder="Todoを入力してください" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
         </p>
         <ul>
