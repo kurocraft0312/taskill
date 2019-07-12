@@ -1,2 +1,4 @@
 #memoフォルダは管理しない
 memo/
+#my-app(Vuetifyのフォルダは管理しない)
+my-app/
