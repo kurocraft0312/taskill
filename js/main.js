@@ -2,14 +2,18 @@
 const vm = new Vue({
     el:'#app',
     data: {
-        btnDisplay:false,//デフォルトはTodo追加欄を非表示
+        // btnDisplay:false,//デフォルトはTodo追加欄を非表示
+        isShow:false,
         items: [],
-        newItemTitle:''
+        newItemTitle:'',
     },
     methods: {
-        displayTodo: function(){//テキストボックスの表示操作
-            this.btnDisplay = true;
-        },
+        // displayTodo: function(){
+        //     this.isShow = false
+        // },
+        // displayTodo: function(){//テキストボックスの表示操作
+        //     this.btnDisplay = true;
+        // },
         addTodo: function(newTitle){
             this.items.push({
                 title:newTitle,
