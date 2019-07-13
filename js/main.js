@@ -7,7 +7,7 @@ const vm = new Vue({
         newItemTitle:''
     },
     methods: {
-        displayTodo: function(){
+        displayTodo: function(){//テキストボックスの表示操作
             this.btnDisplay = true;
         },
         addTodo: function(newTitle){

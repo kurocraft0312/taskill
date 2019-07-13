@@ -15,15 +15,13 @@
     <div id="app">
         <div class="row">
             <div class="col s12">
-                <p>
+                <!-- <p v-show="btnDisplay"> -->
                     <a v-on:click="displayTodo" class="btn-floating btn-large waves-effect waves-light red">
                         <i class="material-icons">add</i>
-                    <!--addTodoの中のnewItemtitleという値を取得している-->]
-                    <p v-show="btnDisplay">
+                    <!--addTodoの中のnewItemtitleという値を取得している-->
                     <input type="text" placeholder="Todoを入力してください" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
-                    </p>
                     </a>
-                </p>
+                <!-- </p> -->
                 <ul class="todo">
                     <li v-for="item in items">
                         <label v-bind:class="{done: item.isChecked }">
