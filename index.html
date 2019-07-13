@@ -16,8 +16,11 @@
         <div class="row">
             <div class="col s12">
                 <p>
+                    <a v-on:click="displayTodo" class="btn-floating btn-large waves-effect waves-light red">
+                        <i class="material-icons">add</i>
                     <!--addTodoの中のnewItemtitleという値を取得している-->
-                    <input type="text" placeholder="Todoを入力してください" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
+                    <input type="text" placeholder="Todoを入力してください" v-model="newItemTitle" v-show="btnDisplay" v-on:keyup.enter="addTodo(newItemTitle)">
+                    </a>
                 </p>
                 <ul class="todo">
                     <li v-for="item in items">

@@ -2,10 +2,14 @@
 const vm = new Vue({
     el:'#app',
     data: {
+        btnDisplay:false,//デフォルトはTodo追加欄を非表示
         items: [],
         newItemTitle:''
     },
     methods: {
+        displayTodo: function(){
+            this.btnDisplay = true;
+        },
         addTodo: function(newTitle){
             this.items.push({
                 title:newTitle,
