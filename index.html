@@ -26,6 +26,7 @@
                         </li>
                     </ul>
                     <input type="text" placeholder="タスクを入力してください" v-if="isShow" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
+                    <p v-else>タスクがありません。</p>
                     <label>
                         <input type="checkbox" v-model="isShow">
                             <a v-model="isShow" class="btn-floating btn-small waves-effect waves-teal accent-3">

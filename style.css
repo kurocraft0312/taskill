@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+#app {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;/*コンテンツ幅（センタリング）*/
+}
+
 h1 {
     font-size: 2em;
 }
