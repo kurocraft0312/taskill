@@ -4,6 +4,11 @@ h1 {
     font-size: 2em;
 }
 
+.todoicon {
+    position: relative;
+    top:4px;
+}
+
 .todo {
     list-style: none;
 }
