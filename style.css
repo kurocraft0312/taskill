@@ -19,6 +19,10 @@ h2 {
     top:4px;
 }
 
+.tasks {
+    text-align: right;
+}
+
 .todo {
     list-style: none;
 }
