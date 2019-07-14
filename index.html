@@ -18,18 +18,17 @@
                     <h1><i class="material-icons small todoicon">view_list</i>taskill</h1>
                     <!--addTodoの中のnewItemtitleという値を取得している-->
                     <ul class="todo">
-                        <li v-for="item in items">
+                        <li v-for="item in items" class="z-depth-2">
                             <label v-bind:class="{done: item.isChecked }">
                                 <input type="checkbox" v-model="item.isChecked" class="filled-in" checked="checked" />
                                 <span>{{item.title}}</span>
                             </label>
                         </li>
                     </ul>
-                    <input type="text" placeholder="タスクを入力してください" v-if="isShow" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
-                    <p v-else>タスクがありません。</p>
+                    <input type="text" placeholder="タスクを入力してください。" v-if="isShow" v-model="newItemTitle" v-on:keyup.enter="addTodo(newItemTitle)">
                     <label>
                         <input type="checkbox" v-model="isShow">
-                            <a v-model="isShow" class="btn-floating btn-small waves-effect waves-teal accent-3">
+                            <a v-model="isShow" class="btn-floating pulse btn-small waves-effect waves-teal accent-3">
                                 <i class="material-icons">add</i>
                             </a>
                     </label>

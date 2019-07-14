@@ -23,6 +23,12 @@ h2 {
     list-style: none;
 }
 
+.z-depth-2 {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+}
+
 .done {
     text-decoration: line-through;
 }
