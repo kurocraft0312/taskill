@@ -20,3 +20,8 @@ h2 {
 .done {
     text-decoration: line-through;
 }
+
+.deletebutton {
+    display: block;
+    margin: 0 0 0 auto;
+}
