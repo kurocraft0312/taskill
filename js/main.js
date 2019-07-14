@@ -47,4 +47,4 @@ const vm = new Vue({
                 return count;
             }
         }
-})
+});
