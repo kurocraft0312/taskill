@@ -2,9 +2,13 @@
 const vm = new Vue({
     el:'#app',
     data: {
+        todos: [
+        {
         isShow:false,
         items: [],
-        newItemTitle:'',
+        newItemTitle:''
+        }
+        ]
     },
     methods: {
         addTodo: function(newTitle){
@@ -34,25 +38,25 @@ const vm = new Vue({
         mounted: function(){
             this.loadTodo();
         },
-    computed: {//残タスクのカウント機能(ここを修正したい)
-        remaining: function() {
-            var count = 0;
-            var items = this.items;
-            var length = items.length;
-            for(var i = 0; i < length; i++) {
-                if(!items[i].done) {
-                    count++;
-                }
-            }
-            return count;
-        }
-    }
-
-    // computed: {
-    //     remaining: function(){
-    //         return this.items.filter(function(val){
-    //             return val.done == true;
-    //         }).length;
+    // computed: {//残タスクのカウント機能(ここを修正したい)
+    //     remaining: function() {
+    //         var count = 0;
+    //         var items = this.items;
+    //         var length = items.length;
+    //         for(var i = 0; i < length; i++) {
+    //             if(!items[i].done) {
+    //                 count++;
+    //             }
+    //         }
+    //         return count;
     //     }
     // }
+
+    computed: {
+        remaining: function(){
+            return this.todos.filter(function(val){
+                return val.done == true;
+            }).length;
+        }
+    }
 });
