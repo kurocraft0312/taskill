@@ -19,10 +19,10 @@
                 <p class="tasks">残タスク数:全{{items.length}}件中残り{{remaining}}件</p>
                 <!--addTodoの中のnewItemtitleという値を取得している-->
                 <ul class="todo">
-                    <li v-for="item in items" class="z-depth-2">
+                    <li id="material" v-for="item in items" v-bind:class="{done: item.isChecked }">
                         <label v-bind:class="{done: item.isChecked }">
                             <input type="checkbox" v-model="item.isChecked" class="filled-in" checked="checked"/>
-                            <span>{{item.title}}</span>
+                            <span class="todotext">{{item.title}}</span>
                         </label>
                     </li>
                 </ul>
