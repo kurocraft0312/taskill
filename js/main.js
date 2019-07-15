@@ -34,17 +34,17 @@ const vm = new Vue({
         mounted: function(){
             this.loadTodo();
         },
-        computed: {//残タスクのカウント機能
-            remaining: function() {
-                var count = 0;
-                var items = this.items;
-                var length = items.length;
-                for(var i = 0; i < length; i++) {
-                    if(!items[i].done) {
-                        count++;
-                    }
+    computed: {//残タスクのカウント機能(ここを修正したい)
+        remaining: function() {
+            var count = 0;
+            var items = this.items;
+            var length = items.length;
+            for(var i = 0; i < length; i++) {
+                if(!items[i].done) {
+                    count++;
                 }
-                return count;
             }
+            return count;
         }
+    }
 });
