@@ -47,4 +47,12 @@ const vm = new Vue({
             return count;
         }
     }
+
+    // computed: {
+    //     remaining: function(){
+    //         return this.items.filter(function(val){
+    //             return val.done == true;
+    //         }).length;
+    //     }
+    // }
 });
